@@ -1,0 +1,29 @@
+const collectibles = [];
+function addCollectible(title, hairColor, outfitType, accessory) {
+    const collectible = {
+      title: title,
+      hairColor: hairColor,
+      outfitType: outfitType,
+      accessory: accessory
+    };
+    collectibles.push(collectible);
+  console.log("Added: " + title);
+}
+function showCollectibles() {
+    for (let i = 0; i < collectibles.length; i++) {
+      console.log("\nID\t: " + (i + 1));
+      console.log("Title\t: " + collectibles[i].title);
+      console.log("Hair Color\t: " + collectibles[i].hairColor);
+      console.log("Outfit Type\t: " + collectibles[i].outfitType);
+      console.log("Accessory\t: " + collectibles[i].accessory);
+    }
+}
+function getTotalCollectibles() {
+    console.log("\nTotal Collectibles: " + collectibles.length);
+}
+addCollectible("Luna", "Blonde", "Dress", "Pearl Necklace");
+addCollectible("Mara", "Red", "Jacket", "Diamond Earrings");
+addCollectible("Tara", "Black", "Sweater", "Gold Ring");
+addCollectible("Zara", "Brown", "Coat", "Silver Bracelet");
+showCollectibles();
+getTotalCollectibles();
